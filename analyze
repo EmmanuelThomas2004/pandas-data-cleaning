@@ -1,0 +1,14 @@
+1. Q: How do you remove duplicate rows?
+   Sol: df = df.drop_duplicates()
+
+2. Q: How do you fill missing values in Salary with the median?
+   Sol: df['Salary'] = df['Salary'].fillna(df['Salary'].median())
+
+3. Q: How do you remove rows where Customer_ID is missing?
+   Sol: df = df.dropna(subset=['Customer_ID'])
+
+4. Q: How do you convert Order_Date to datetime?
+   Sol: df['Order_Date'] = pd.to_datetime(df['Order_Date'], errors='coerce')
+
+5. Q: How do you remove leading and trailing spaces from Customer_Name?
+   Sol: df['Customer_Name'] = df['Customer_Name'].str.strip()
